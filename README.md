@@ -1,2 +1,2 @@
 # adventjs
-Adviento de programación creado por https://github.com/midudev
+Adviento de programación creado por @midudev
