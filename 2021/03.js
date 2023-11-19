@@ -6,13 +6,13 @@
 // 
 // Crea una función que pasándole el texto de la carta, devuelva true si es válida y false si no lo es. ¡Y acaba con la travesura del Grinch!
 
-const isValid = (letter) => {
+function isValid (letter){
     let abierto = 0
     let cerrado = 0
     let relleno = 0
     let invalido = false
     const char_array = letter.split('')
-    char_array.forEach(char => {
+    char_array.forEach(function(char){
         if (char === '('){
             abierto += 1
         } else if (char === ')'){
@@ -28,9 +28,9 @@ const isValid = (letter) => {
     return abierto === cerrado && abierto === relleno && !invalido
 }
 
-console.log(isValid("bici coche (balón) bici coche peluche")) // -> ✅
-console.log(isValid("(muñeca) consola bici")) // -> ✅
-console.log(isValid("bici coche (balón bici coche")) // -> ❌
-console.log(isValid("peluche (bici [coche) bici coche balón")) // -> ❌
-console.log(isValid("(peluche {) bici")) // -> ❌
-console.log(isValid("() bici")) // -> ❌
+console.log(isValid("bici coche (balón) bici coche peluche")) // true
+console.log(isValid("(muñeca) consola bici")) // true
+console.log(isValid("bici coche (balón bici coche")) // false
+console.log(isValid("peluche (bici [coche) bici coche balón")) // false
+console.log(isValid("(peluche {) bici")) // false
+console.log(isValid("() bici")) // false

@@ -7,13 +7,13 @@
 // Ten en cuenta que el árbol es un string y necesitas los saltos de línea \n para cada línea para que se forme bien el árbol.
 
 
-const createXmasTree = (height) => {
+function createXmasTree (height){
     let tree = ''
     let base = height - 1
     let leafs = 1
 
     const iter = [...Array(height).keys()]
-    iter.forEach((i) => {
+    iter.forEach(function(i){
         tree += '_'.repeat(base) + '*'.repeat(leafs) + '_'.repeat(base) + '\n'
         base -= 1
         leafs += 2
@@ -27,5 +27,28 @@ const createXmasTree = (height) => {
 }
 
 console.log(createXmasTree(3))
+// __*__
+// _***_
+// *****
+// __#__
+// __#__
 console.log(createXmasTree(5))
-console.log(createXmasTree(10))
+// ____*____
+// ___***___
+// __*****__
+// _*******_
+// *********
+// ____#____
+// ____#____
+console.log(createXmasTree(9))
+// ________*________
+// _______***_______
+// ______*****______
+// _____*******_____
+// ____*********____
+// ___***********___
+// __*************__
+// _***************_
+// *****************
+// ________#________
+// ________#________

@@ -14,7 +14,7 @@ const ovejas = [
 
 function contarOvejas(ovejas) {
     // aquí tu magia
-    const filtered = ovejas.filter(function (oveja) {
+    const filtered = ovejas.filter(function(oveja) {
         const lower_name = oveja.name.toLowerCase()
         if (
             oveja.color === 'rojo' &&
@@ -27,9 +27,7 @@ function contarOvejas(ovejas) {
     return filtered
 }
 
-const ovejasFiltradas = contarOvejas(ovejas)
-
-console.log(ovejasFiltradas)
+console.log(contarOvejas(ovejas))
 //[
 //  { name: 'Navidad', color: 'rojo' },
 //  { name: 'Ki Na Ma', color: 'rojo' }

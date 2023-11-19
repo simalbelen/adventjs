@@ -11,11 +11,11 @@
 
 const carta = 'bici    coche   balón    _playstation   bici   coche   peluche'
 
-const listGifts = (letter) => {
+function listGifts(letter) {
     let regalos = {}
     letter = letter.split(' ')
     console.log(letter)
-    letter.forEach((regalo) => {
+    letter.forEach(function(regalo){
         if (regalo.split('')[0] != '_' && regalo != ''){
             if (regalos[regalo] === undefined){
                 regalos[regalo] = 1
@@ -28,7 +28,4 @@ const listGifts = (letter) => {
     return regalos
 }
 
-const regalos = listGifts(carta)
-
-console.log(regalos)
-// { bici: 2, coche: 2, 'balón': 1, peluche: 1 }
+console.log( listGifts(carta)) // { bici: 2, coche: 2, 'balón': 1, peluche: 1 }

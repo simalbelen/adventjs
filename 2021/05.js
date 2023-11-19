@@ -5,7 +5,7 @@
 //
 // ¡Pero ojo! También hay que indicar si la fecha es del mismo día (devolveríamos 0) o si es una fecha futura (devolveríamos el número de días en negativo -)
 
-const daysToXmas = (date) => {
+function daysToXmas(date){
     const xmas = new Date('Dec 25, 2021')
 
     let diff = xmas.getTime() - date.getTime();
