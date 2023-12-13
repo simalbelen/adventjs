@@ -1,20 +1,14 @@
 function decode(message) {
-    
-    //while (message.includes(')')) {
+    while (message.includes(')')) {
         let [aux, ...end] = message.split(')')
+        end = end.join(')')
         let start = aux.split('(')
         let str = start.pop()
-        console.log(str)
-        str = str.split("").reverse().join(""); // Reverse string
-        console.log(start) 
-        start.push(str, end[0]).join()
-        console.log(start) 
+        start = start.join('(')
 
-         
-        // let str = message.split(')')[0].split('(').pop()
-        // str = str.split("").reverse().join(""); // Reverse string
-        // console.log(str)
-     //}
+        str = str.split("").reverse().join(""); // Reverse string
+        message = start.concat(str, end)
+    }
     return message
 }
 
