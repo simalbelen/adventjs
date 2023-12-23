@@ -10,7 +10,6 @@ function drawGift(size, symbol) {
     let dimension = size + (size - 1) // ancho = alto. El punto medio siempre coincide con "size"
     const repeated_part = '#' + symbol.repeat(size - 2) + '#'
     let num_spaces = size
-    // Primera parte del regalo
     for (let i = 1; i <= dimension; i++) {
       if (i === size){ // Mitad del regalo
         gift = gift + '#'.repeat(size - 1) + repeated_part + '\n'
@@ -21,7 +20,7 @@ function drawGift(size, symbol) {
         } else { // Resto de filas
           gift = gift + ' '.repeat(num_spaces) + repeated_part + symbol.repeat(dimension - size - num_spaces - 1) + '#\n'
         }
-      } else { // i > size. Parte inferior del regalo
+      } else { // (i > size) Parte inferior del regalo
         if (num_spaces === (size - 1)){ // Ultima fila
           gift = gift + '#'.repeat(size) + ' '.repeat(num_spaces) + '\n'
         } else { // Resto de filas
@@ -30,10 +29,6 @@ function drawGift(size, symbol) {
         num_spaces++
       }
     }
-      
-    
-    // Segunda parte del regalo
-
     return gift
   }
 
