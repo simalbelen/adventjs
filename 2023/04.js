@@ -22,7 +22,7 @@ function decode(message) {
 }
 
 
-console.log(decode('hola (odnum)')) // hola mundo
+console.log(decode('hola (odnum)'))// hola mundo
 
 console.log(decode('(olleh) (dlrow)!'))// hello world!
 
